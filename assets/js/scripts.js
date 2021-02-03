@@ -148,3 +148,59 @@ function NumeroMayor() {
 }
 
 
+
+
+// EJERCICIO N79817
+function ResultadoTesting() {
+	let nombre, porcentaje
+	let cantidadPreguntas = 0;
+	let cantidadCorrectas = 0;
+
+	nombre = prompt("Ingrese su nombre:","");
+	cantidadPreguntas = parseInt(prompt("Ingrese cantidad total de preguntas",""));
+	cantidadCorrectas = parseInt(prompt("Ingrese cantidad de preguntas correctas",""));
+
+	// Formula para el porcentaje => (cantidadX[n del total Y] / cantidadTotalY) * 100
+	porcentaje = (cantidadCorrectas / cantidadPreguntas) * 100;
+	porcentaje = porcentaje.toFixed(0);
+	console.info(porcentaje);
+
+	if (porcentaje >= 90) {
+		var texto = `<ul>
+				<li>Sr. ${nombre.toUpperCase()} segun nuestros resultados, usted esta en un <mark><b>Nivel Superior</b></mark></li>
+			</ul>`;
+		document.getElementById("msgSeven").innerHTML = texto;
+
+	} else {
+		if (porcentaje >= 75 && porcentaje < 90) {
+			var texto = `<ul>
+					<li>Sr. ${nombre.toUpperCase()} segun nuestros resultados, usted esta en un <mark><b>Nivel Medio</b></mark></li>
+				</ul>`;
+			document.getElementById("msgSeven").innerHTML = texto;
+
+		} else {
+			if (porcentaje >= 50 && porcentaje < 75) {
+				document.getElementById("msgSeven").innerHTML = `
+					<ul>
+						<li>Sr. ${nombre.toUpperCase()} segun nuestros resultados, usted esta en un <mark><b>Nivel Regular</b></mark></li>
+					</ul>
+				`;
+
+			} else {
+				if (porcentaje < 50) {
+					document.getElementById("msgSeven").innerHTML = `
+						<ul>
+							<li>Sr. ${nombre.toUpperCase()} segun nuestros resultados, usted esta en un <mark><b>Fuera de Nivel</b></mark></li>
+						</ul>
+					`;
+					
+				} else {
+					document.getElementById("msgSeven").innerHTML = `!!Sr. ${nombre.toUpperCase()} DEBE REALIZAR EL TESTING NUEVAMENTE`;
+				}
+			}
+		}
+	}
+}
+
+
+
