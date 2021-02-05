@@ -50,7 +50,7 @@
 					<div class="accordion-item">
 						<h2 class="accordion-header" id="headingTwo">
 							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-							Ejercicio #79812: Imprimir datos de un arreglo (arrays)
+							Ejercicio #79812: Imprimir datos de un arreglo (arrays) (<b>PENDIENTE.</b>)
 							</button>
 						</h2>
 						<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExercise">
@@ -153,11 +153,109 @@
 						</div>
 					</div>
 
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingOcho">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOcho" aria-expanded="false" aria-controls="collapseOcho">
+								Ejercicio #79818: Suma y Multiplicacion
+							</button>
+						</h2>
+						<div id="collapseOcho" class="accordion-collapse collapse" aria-labelledby="headingOcho" data-bs-parent="#accordionExercise">
+							<div class="accordion-body">
+								<p>Solicitar al usuario que ingrese 3 numeros enteros, si los tres numeros son iguales realizar
+								la suma de los dos primeros numeros y dicho resultado obtener el producto, es decir, la suma
+								por el tercer numero.</p>
+								<div class="row">
+									<div class="col-md-3">
+										<input class="form-control form-control-sm" type="text" id="inpUno" placeholder="Primer Valor">	
+									</div>
+									<div class="col-md-3">
+										<input class="form-control form-control-sm" type="text" id="inpDos" placeholder="Segundo Valor">	
+									</div>
+									<div class="col-md-3">
+										<input class="form-control form-control-sm" type="text" id="inpTres" placeholder="Tercer Valor">	
+									</div>
+								</div>
+
+								<br>
+								<button type="button" onclick="SumaMultiplicacion();" class="btn btn-secondary btn-sm">
+									Ejecutar este ejercicio
+								</button>
+								<br><br>
+								<p id="msgOcho" class="mb-0"></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingNueve">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNueve" aria-expanded="false" aria-controls="collapseNueve">
+								Ejercicio #79819: Calcular sueldo de un trabajador (<b>PENDIENTE.</b>)
+							</button>
+						</h2>
+						<div id="collapseNueve" class="accordion-collapse collapse" aria-labelledby="headingNueve" data-bs-parent="#accordionExercise">
+							<div class="accordion-body">
+								<div class="row">
+									<div class="col-md-3">
+										<input class="form-control form-control-sm" type="number" id="inpSueldo" placeholder="Ingrese su sueldo">	
+									</div>
+									<div class="col-md-3">
+										<input class="form-control form-control-sm" type="number" id="inpAntiguedad" placeholder="Años de antiguedad">	
+									</div>
+								</div>
+
+								<br>
+								<button type="button" onclick="SueldoTrabajador();" class="btn btn-secondary btn-sm">
+									Ejecutar este ejercicio
+								</button>
+								<br><br>
+								<p id="msgNueve" class="mb-0"></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingDiez">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiez" aria-expanded="false" aria-controls="collapseDiez">
+								Ejercicio #79820: Calculadora Utilizando Arrays (Suma, Resta, Mutiplicacion, Division) (<b>PENDIENTE.</b>)
+							</button>
+						</h2>
+						<div id="collapseDiez" class="accordion-collapse collapse" aria-labelledby="headingDiez" data-bs-parent="#accordionExercise">
+							<div class="accordion-body">
+								<button type="button" class="btn btn-secondary btn-sm" id="calcBasicArray">
+									Ejecutar este ejercicio
+								</button>
+								<br><br>
+								<!-- <p id="listarValores" class="mb-0"></p> -->
+								<p id="msgDiez" class="mb-0"></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingOnce">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOnce" aria-expanded="false" aria-controls="collapseOnce">
+								Practica #79821: Evento <img src="./assets/img/arrow-right-short.svg" alt="arrow-right-short"> Desactivar boton rigth mouse.
+							</button>
+						</h2>
+						<div id="collapseOnce" class="accordion-collapse collapse" aria-labelledby="headingOnce" data-bs-parent="#accordionExercise">
+							<div class="accordion-body">
+								<p>Haga click en el boton "<b>Ejecutar evento</b>" e Intente pulsar el boton de la derecha de tu mouse.</p>
+								
+								<!-- <br><br> -->
+								<!-- <p id="msgOnce" class="mb-0"></p> -->
+								<button type="button" class="btn btn-secondary btn-sm" id="disabledRigth">
+									Ejecutar evento
+								</button>
+							</div>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</section>
 	</main>
 
+	<script src="./resource/jquery/jquery-3.3.1.js"></script>
 	<script src="./resource/bootstrap-v5/js/bootstrap.bundle.min.js"></script>
 	<script src="./assets/js/scripts.js"></script>
 </body>
