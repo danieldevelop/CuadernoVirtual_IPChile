@@ -204,3 +204,88 @@ function ResultadoTesting() {
 
 
 
+
+// EJERCICIO N79818
+function SumaMultiplicacion() {
+	// console.info($('#inpUno').val().trim());
+	var a = parseInt($("#inpUno").val().trim());
+	var b = parseInt($("#inpDos").val().trim());
+	var c = parseInt($("#inpTres").val().trim());
+
+	if (a == b && b == c) {
+		// $("#msgOcho").html(`La suma es ${(parseInt(a) + parseInt(b))}`);
+		$("#msgOcho").html(`<ul><li>La suma es ${(a+b)}</li>
+			<li>El producto es ${((a+b)*c)}</li></ul>`
+		);
+	} else {
+		$("#msgOcho").html("!!Error, lo tres numeros no son iguales");
+	}
+}
+
+
+
+
+// EJERCICIO N79819
+function SueldoTrabajador() {
+	alert("!!Este ejercicio se encuentra pendiente");
+}
+
+
+
+
+/**
+ * EJERCICIO N79820
+ * @description Calculadora basica, que recibe dos numeros o mas guardandolos en un array
+ */
+// function LlenarVectores(a, b) {
+// 	for (var i=0; i<a.length; i++) {
+// 		let arr1 = parseInt(prompt("Ingrese primer y segundo valor para el primer arreglo",""));
+// 		a[i] = arr1;
+// 	}
+// 	for (var i=0; i<b.length; i++) {
+// 		let arr2 = parseInt(prompt("Ingrese tercer y cuarto valor para el segundo arreglo",""));
+// 		b[i] = arr2;
+// 	}
+// }
+
+// function Suma(n1, n2, rsSuma) {
+// 	for (var i=0; i<rsSuma.length; i++) {
+// 		$("#msgDiez").html(`<table>
+// 			<tr>
+// 				<td>${n1[i]} + ${n2[i]} = ${(n1[i]+n2[i])}</td>
+// 			</tr>
+// 			</table>`
+// 		);
+// 	}
+// }
+
+// document.getElementById("calcBasicArray").addEventListener('click', () => {
+// 	let num1 = new Array(2);
+// 	let num2 = new Array(2);
+// 	let rsSuma = new Array(2);
+	
+// 	LlenarVectores(num1, num2);
+// 	Suma(num1, num2, rsSuma);
+// });
+/**
+ * FIN EJERCICIO N79820
+ */
+
+
+
+
+/**
+ * PRACTICA N79821
+ * @description Desactivar el evento "onmousedown" del raton (lado derecho)
+ */
+function ControlRaton() {
+ 	if (event.button == 2) {
+ 		window.alert("Evento temporalmente desactivado.");
+ 	}
+}
+document.getElementById("disabledRigth").addEventListener('click', ()=> { 
+	document.onmousedown = ControlRaton
+});
+/**
+ * FIN PRACTICA N79821
+ */
