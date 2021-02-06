@@ -13,3 +13,9 @@ input:focus, input.form-control:focus {
 .tp-menu > span {
 	margin-right: 1rem;
 }
+
+.lnk-collapseDoce {
+	color: #164C2E;
+	border: none;
+	font-weight: 500;
+}
