@@ -289,3 +289,41 @@ document.getElementById("disabledRigth").addEventListener('click', ()=> {
 /**
  * FIN PRACTICA N79821
  */
+
+
+
+
+// EJERCICIO N79823
+function quitarGuiones(inputNumber) { 
+	inputNumber.value = inputNumber.value.replace(',','.'); 
+}
+
+function NotaMayorIgual() {
+	let noteUno = parseFloat($("#txtNum1").val().trim());
+	let noteDos = parseFloat($("#txtNum2").val().trim());
+	let noteTres = parseFloat($("#txtNum3").val().trim());
+	let suma = 0, prom = 0;
+
+	suma = noteUno + noteDos + noteTres;
+	prom = (suma)/3;
+
+	// if (noteUno > notaDos && noteUno > noteTres) {
+	// 	$("#msgTrece").html(`La nota mayor es ${noteUno}`);
+	// } else if (noteDos > noteUno && noteDos > noteTres) {
+	// 	$("#msgTrece").html(`La nota mayor es ${noteDos}`);
+	// } else if (noteTres > noteUno && noteTres > noteDos) {
+	// 	$("#msgTrece").html(`La nota mayor es ${noteTres}`);
+	// }
+
+	if (prom >= 7) {
+		$("#msgTrece").html(`Tu promedio es ${prom.toFixed(1)} y su situacion es: <b>PROMOCIONADO</b>`);
+	} else {
+		if (prom >= 4) {
+			$("#msgTrece").html(`Tu promedio es ${prom.toFixed(1)} y su situacion es: <b>REGULAR</b>`);
+		} else {
+			$("#msgTrece").html(`Tu promedio es ${prom} y usted se encuentra <b>REPROBADO</b>`)
+		}
+	}
+	
+}
+
