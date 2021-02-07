@@ -14,18 +14,28 @@
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="container">
 				<a href="./index.html" class="navbar-brand" title="Inicio">Inst. IPCHILE</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      				<span class="navbar-toggler-icon"></span>
+    			</button>
 
-    			<div class="collapse navbar-collapse tp-menu d-flex justify-content-end" id="navMenu">
-    				<span class="navbar-text">2S-Taller de Programaci&oacute;n.</span>
-    				<!-- <span class="navbar-text">2S-Texto de prueba.</span> -->
-    			</div>
+    			<div class="collapse navbar-collapse tp-menu" id="navMenu">
+      				<ul class="navbar-nav"><!--me-auto mb-2 mb-lg-0-->
+      					<li class="nav-item dropdown">
+          					<a class="nav-link dropdown-toggle" href="#" id="navMenuCodigo" role="button" data-bs-toggle="dropdown" aria-expanded="false">#codigo</a>
+          					<ul class="dropdown-menu" aria-labelledby="navMenuCodigo">
+            					<li><a class="dropdown-item" href="#">codigo02-18</a></li>
+            					<li><a class="dropdown-item" href="#">codigo03-10</a></li>
+          					</ul>
+        				</li>
+      				</ul>
+      			</div>
 			</div>
 		</nav>
 	</header>
 
 	<main>
 		<section id="exercisePropuestos" class="mb-5">
-			<h2 class="text-center p-4">Ejercicios Propuestos - Prof. Klages.</h2>
+			<h2 class="text-center p-4">Ejercicios Propuestos - Prof. Klages <small class="h5 text-muted">2S-Taller de Programaci&oacute;n</small></h2>
 			<div class="container">
 				<div class="accordion" id="accordionExercise">
 					
@@ -234,7 +244,7 @@
 					<div class="accordion-item">
 						<h2 class="accordion-header" id="headingOnce">
 							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOnce" aria-expanded="false" aria-controls="collapseOnce">
-								Practica #79821: Evento <img src="./assets/img/arrow-right-short.svg" alt="arrow-right-short"> Desactivar boton rigth mouse.
+								Practica #79821: Evento "onmouse" <img src="./assets/img/arrow-right-short.svg" alt="arrow-right-short"> Desactivar boton rigth mouse.
 							</button>
 						</h2>
 						<div id="collapseOnce" class="accordion-collapse collapse" aria-labelledby="headingOnce" data-bs-parent="#accordionExercise">
@@ -250,6 +260,59 @@
 						</div>
 					</div>
 
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingDoce">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDoce" aria-expanded="false" aria-controls="collapseDoce">
+								Practica #79822: Evento "open" <img src="./assets/img/arrow-right-short.svg" alt="arrow-right-short"> Abrir una pagina nueva en otra pestaña.
+							</button>
+						</h2>
+						<div id="collapseDoce" class="accordion-collapse collapse" aria-labelledby="headingDoce" data-bs-parent="#accordionExercise">
+							<div class="accordion-body">
+								<p>Haga click en los enlaces para visitar los sitios webs.</p>
+								
+								<ol>
+									<li><input type="submit" value="Enlace 1: Window of address bars - luisbonila.com" onclick="window.open('http://www.luisbonilla.com')" class="lnk-collapseDoce"></li>
+									<li><input type="submit" value="Enlace 2: Window of status bars - terra.es" onclick="window.open('http://www.terra.es','location=yes, width=300, heigth=400')" class="lnk-collapseDoce"></li>
+									<li><input type="submit" value="Enlace 3: Windown of address and status bars - terra.es" onclick="window.open('http://www.terra.es','location=yes, width=300, heigth=400')" class="lnk-collapseDoce"></li>
+								</ol>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingTrece">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrece" aria-expanded="false" aria-controls="collapseTrece">
+								Ejercicio #79823: Promedio de Notas
+							</button>
+						</h2>
+						<div id="collapseTrece" class="accordion-collapse collapse" aria-labelledby="headingTrece" data-bs-parent="#accordionExercise">
+							<div class="accordion-body">
+								<ul>
+									<li>Igual a 7 = <b>PROMOCIONADO</b></li>
+									<li>Mayor o igual a 4 = <b>REGULAR</b></li>
+									<li>Menor 4 = <b>REPROBADO</b></li>
+								</ul>
+								<div class="row">
+									<div class="col-md-2">
+										<input class="form-control form-control-sm" type="text" id="txtNum1" placeholder="Primer valor" onkeyup="quitarGuiones(this)">	
+									</div>
+									<div class="col-md-2">
+										<input class="form-control form-control-sm" type="text" id="txtNum2" placeholder="Segundo valor" onkeyup="quitarGuiones(this)">	
+									</div>
+									<div class="col-md-2">
+										<input class="form-control form-control-sm" type="text" id="txtNum3" placeholder="Tercer valor" onkeyup="quitarGuiones(this)">	
+									</div>
+								</div>
+
+								<br>
+								<button type="button" class="btn btn-secondary btn-sm" onclick="NotaMayorIgual();">
+									Ejecutar este ejercicio
+								</button>
+								<p id="msgTrece" class="mt-3 mb-0"></p>
+							</div>
+						</div>
+					</div>
+									
 				</div>
 			</div>
 		</section>
