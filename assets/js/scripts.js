@@ -20,16 +20,24 @@ document.getElementById("obtenerNombreEdad").addEventListener('click', () => {
 
 // EJERCICIO N79812
 function imprimirArray() {
-	let nombres = new Array("Pablo", "Juan");
-	let apellidos = new Array("Oviedo", "Santiago");
-	// let nombres = ["Pablo","Juan"];
-	// let apellidos = ["Oviedo","Santiago"];
-	// let data = nombres.concat(apellidos);
+	var nombre = new Array("Pablo", "Juan");
+	var ciudad = new Array("Oviedo", "Santiago");
+	
+	// for (var i in nombre) {
+	// 	document.getElementById("msgTwo").innerHTML = nombre[i]+" de "+ciudad[i]+"<br>";
+	// 	// window.alert(nombre[i]+" de "+ciudad[i]+"\n");
+	// }
 
-	for (let i=0; i<nombres.length; i++) {
-			document.getElementById("msgTwo").innerHTML = `<ul><li>${nombres[i]} ${apellidos[i]}</ul></li>`;
-			// document.getElementById("msgTwo").innerHTML = `<ul><li>${data}</ul></li>`;
-	} 
+	for (var i=0; i<nombre.length; i++) {
+		for (var j=0; j<nombre.length; j++) {
+			// document.getElementById("msgTwo").innerHTML = nombre[0]+" de "+ciudad[0]+"<br>"+nombre[1]+" de "+ciudad[1];
+			document.getElementById("msgTwo").innerHTML = `<ul>
+			<li>${nombre[0]} de ${ciudad[0]}</li>
+			<li>${nombre[1]} de ${ciudad[1]}</li>
+			</ul>`;
+			// window.alert(nombre[i]+" de "+ciudad[i]+"\n");
+		}
+	}	 
 }
 
 
@@ -315,14 +323,18 @@ function NotaMayorIgual() {
 	// 	$("#msgTrece").html(`La nota mayor es ${noteTres}`);
 	// }
 
-	if (prom >= 7) {
-		$("#msgTrece").html(`Tu promedio es ${prom.toFixed(1)} y su situacion es: <b>PROMOCIONADO</b>`);
-	} else {
-		if (prom >= 4) {
-			$("#msgTrece").html(`Tu promedio es ${prom.toFixed(1)} y su situacion es: <b>REGULAR</b>`);
+	if (!(isNaN(noteUno) || isNaN(noteDos) || isNaN(noteTres))) {
+		if (prom >= 7) {
+			$("#msgTrece").html(`Tu promedio es ${prom.toFixed(1)} y su situacion es: <b>PROMOCIONADO</b>`);
 		} else {
-			$("#msgTrece").html(`Tu promedio es ${prom} y usted se encuentra <b>REPROBADO</b>`)
+			if (prom >= 4) {
+				$("#msgTrece").html(`Tu promedio es ${prom.toFixed(1)} y su situacion es: <b>REGULAR</b>`);
+			} else {
+				$("#msgTrece").html(`Tu promedio es ${prom} y usted se encuentra <b>REPROBADO</b>`)
+			}
 		}
+	} else {
+		$("#msgTrece").html("No has ingresado ningun valor");
 	}
 	
 }
