@@ -339,3 +339,68 @@ function NotaMayorIgual() {
 	
 }
 
+
+
+
+// EJERCICIO N79824
+function PerimetroCuadrado() {
+	var ladoCuadrado = parseInt(prompt("Ingrese lado del cuadrado",""));
+
+	$("#msgKatorce").html(`El perimetro del cuadrado es ${Math.pow(ladoCuadrado,4)}`);
+}
+
+
+
+
+// EJERCICIO N79825
+function Suma_Producto() {
+	let a = parseInt(prompt("Ingrese primer valor: ",""));
+	let b = parseInt(prompt("Ingrese segundo valor: ",""));
+	let c = parseInt(prompt("Ingrese tercer valor: ",""));
+	let d = parseInt(prompt("Ingrese cuarto valor: ",""));
+
+	var suma = a+b+c+d;
+	var producto = a*b*c*d;
+	$("#msgQuince").html(`<ul>
+		<li>La suma de <b>${a}+${b}+${c}+${d}</b> es <b>${suma}</b></li>
+		<li>El producto de <b>${a} x ${b} x ${c} x ${d}</b> es <b>${producto}</b></li>
+	</ul>`);
+}
+
+
+
+
+// EJERCICIO N79826
+function ValorCompra() {
+	let opcion = parseInt(document.getElementById("inpOpcion").value.trim());
+	let cantidad, total;
+	
+	switch (opcion) {
+		case 1:
+			cantidad = parseInt(prompt("Cuantos desea llevar??",""));
+			total = 2390 * cantidad;
+			document.getElementById("msgDiezSeis").innerHTML = `Total de la compra $${(total)}`;
+			break;
+		case 2:
+			cantidad = parseInt(prompt("Cuantos desea llevar??",""));
+			total = 790 * cantidad;
+			document.getElementById("msgDiezSeis").innerHTML = `Total de la compra $${total}`;
+			break;
+		case 3:
+			cantidad = parseInt(prompt("Cuantos desea llevar??",""));
+			total = 1990 * cantidad;
+			document.getElementById("msgDiezSeis").innerHTML = `Total de la compra $${total}`;
+			break;
+		case 4:
+			cantidad = parseInt(prompt("Cuantos desea llevar??",""));
+			total = 3000 * cantidad;
+			document.getElementById("msgDiezSeis").innerHTML = `Total de la compra $${total}`;
+			break;
+		default:
+			document.getElementById("msgDiezSeis").innerHTML = "!!Debe seleccionar un articulo";
+	}
+	
+}
+
+
+
