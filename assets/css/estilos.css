@@ -19,3 +19,7 @@ input:focus, input.form-control:focus {
 	border: none;
 	font-weight: 500;
 }
+
+.btnButton {
+	width: 10rem;
+}
