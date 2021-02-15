@@ -399,8 +399,80 @@ function ValorCompra() {
 		default:
 			document.getElementById("msgDiezSeis").innerHTML = "!!Debe seleccionar un articulo";
 	}
-	
+	$("#inpOpcion").val("");	
 }
+
+
+
+
+// EJERCICIO N79827
+function validarEdades(edad) {
+	if (edad>=18 && edad<36) {
+		document.getElementById("msgDiezSeite").innerHTML = "Sos mayor de edad";
+	} else if (edad>=36 && edad<45) {
+		document.getElementById("msgDiezSeite").innerHTML = "Eres un adulto joven";
+	} else if (edad>=45 && edad<75) {
+		document.getElementById("msgDiezSeite").innerHTML = "!!Upa estas como el vino";
+	} else if (edad>=75) {
+		document.getElementById("msgDiezSeite").innerHTML = "Estimado Sr/Sra es de la tercera edad";
+	}
+}
+
+
+
+
+// EJERCICIO N79828
+let btnExecute = document.getElementById("classMath");
+
+function Logaritmo(valor) {
+	document.getElementById("msgDiezOcho-Uno").innerHTML = `
+	El logaritmo is ${(Math.log(valor).toPrecision(5))}`;
+}
+
+function Potencia(valor) {
+	document.getElementById("msgDiezOcho-Dos").innerHTML = `
+	La potencia is ${(Math.pow(valor, 2))}`;
+}
+
+function RaizCuadrada(valor) {
+	document.getElementById("msgDiezOcho-Tres").innerHTML = `
+	La raiz cuadrada de <b>${valor}</b> is ${(Math.sqrt(valor).toPrecision(5))}`;
+}
+
+function Redondear(valor) {
+	document.getElementById("msgDiezOcho-Cuatro").innerHTML = `
+	El valor redondeado de <b>${valor}</b> is ${(Math.round(valor))}`;
+}
+
+btnExecute.addEventListener('click', function() {
+	let numero = parseFloat(prompt("Ingrese un valor entero o decimal",""));
+
+	if (isNaN(numero)) {
+		alert("Solo debe ingresar numeros");
+	} else {
+		Logaritmo(numero);
+		Potencia(numero);
+		RaizCuadrada(numero);
+		Redondear(numero);
+	}
+});
+
+
+
+
+// EJERCICIO N79829
+function NumerosConsecutivos() {
+	let valorInicial = parseInt(prompt("Ingrese numero de inicio",""));
+	let valorFinal = parseInt(prompt("Ingrese numero final",""));
+
+	for(var i=valorInicial; i<=valorFinal; i++) {
+		// $("#msgDiezNueve").html(${i}+" ");
+		// document.write(i+" ");
+		// document.getElementById("msgDiezNueve").innerHTML = i+" ";
+		console.info(i+" ");
+	}
+}
+
 
 
 
