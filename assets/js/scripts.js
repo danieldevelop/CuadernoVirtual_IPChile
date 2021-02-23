@@ -22,14 +22,14 @@ document.getElementById("obtenerNombreEdad").addEventListener('click', () => {
 function imprimirArray() {
 	var nombre = new Array("Pablo", "Juan");
 	var ciudad = new Array("Oviedo", "Santiago");
-	
+
 	// for (var i in nombre) {
 	// 	document.getElementById("msgTwo").innerHTML = nombre[i]+" de "+ciudad[i]+"<br>";
 	// 	// window.alert(nombre[i]+" de "+ciudad[i]+"\n");
 	// }
 
-	for (var i=0; i<nombre.length; i++) {
-		for (var j=0; j<nombre.length; j++) {
+	for (var i = 0; i < nombre.length; i++) {
+		for (var j = 0; j < nombre.length; j++) {
 			// document.getElementById("msgTwo").innerHTML = nombre[0]+" de "+ciudad[0]+"<br>"+nombre[1]+" de "+ciudad[1];
 			document.getElementById("msgTwo").innerHTML = `<ul>
 			<li>${nombre[0]} de ${ciudad[0]}</li>
@@ -37,7 +37,7 @@ function imprimirArray() {
 			</ul>`;
 			// window.alert(nombre[i]+" de "+ciudad[i]+"\n");
 		}
-	}	 
+	}
 }
 
 
@@ -46,7 +46,7 @@ function imprimirArray() {
 // EJERCICIO N79813
 let promedioNotas = document.getElementById("btn-promedio-notas");
 
-promedioNotas.addEventListener('click', function() {
+promedioNotas.addEventListener('click', function () {
 	let notaUno = 0, notaDos = 0, notaTres = 0;
 	let suma = 0, prom = 0;
 
@@ -54,8 +54,8 @@ promedioNotas.addEventListener('click', function() {
 	notaDos = parseFloat(prompt("Ingrese segunda nota", "0"));
 	notaTres = parseFloat(prompt("Ingrese tercera nota", "0"));
 
-	suma = notaUno+notaDos+notaTres;
-	prom = (suma)/3;
+	suma = notaUno + notaDos + notaTres;
+	prom = (suma) / 3;
 
 	document.getElementById("msgThree").innerHTML = `Su promedio es <b>${prom.toFixed(2)}</b>`;
 });
@@ -68,7 +68,7 @@ function ShowText() {
 	let cadena = prompt("Escriba un objeto: \n- Notebook\n- Celular\n- Perfume\n- Mueble");
 	// cadena = parseInt(cadena);
 
-	switch(cadena) {
+	switch (cadena) {
 		case "notebook":
 		case "NOTEBOOK":
 		case "Notebook":
@@ -105,17 +105,17 @@ function ShowText() {
 // EJERCICIO N79815
 function NumberDigitos() {
 	let numero = parseInt(prompt("Favor ingresar numeros del 1 al 99"));
-	
+
 	if (numero < 0) {
 		document.getElementById("msgCinco").innerHTML = "EL numero debe ser positivo o mayor a 0";
 	} else {
-		if (numero >=1 && numero <=9) {
+		if (numero >= 1 && numero <= 9) {
 			document.getElementById("msgCinco").innerHTML = "EL numero ingresado tiene solo <b>1 DIGITO</b>";
 		} else {
-			if (numero >=10 && numero <=99) {
+			if (numero >= 10 && numero <= 99) {
 				document.getElementById("msgCinco").innerHTML = "EL numero ingresado tiene solo <b>2 DIGITO</b>";
 			} else {
-				document.getElementById("msgCinco").innerHTML = "EL numero ingresado es mayor a 100";	
+				document.getElementById("msgCinco").innerHTML = "EL numero ingresado es mayor a 100";
 			}
 		}
 	}
@@ -133,11 +133,11 @@ function NumberDigitos() {
 function NumeroMayor() {
 	let num1, num2, num3 = 0;
 
-	num1 = prompt('Ingrese primer numero',' ');
+	num1 = prompt('Ingrese primer numero', ' ');
 	num1 = parseInt(num1);
-	num2 = prompt('Ingrese segundo numero',' ');
+	num2 = prompt('Ingrese segundo numero', ' ');
 	num2 = parseInt(num2);
-	num3 = prompt('Ingrese tercer numero',' ');
+	num3 = prompt('Ingrese tercer numero', ' ');
 	num3 = parseInt(num3);
 
 	document.getElementById("listNumber").innerHTML = `Numeros ingresados <ul>
@@ -164,9 +164,9 @@ function ResultadoTesting() {
 	let cantidadPreguntas = 0;
 	let cantidadCorrectas = 0;
 
-	nombre = prompt("Ingrese su nombre:","");
-	cantidadPreguntas = parseInt(prompt("Ingrese cantidad total de preguntas",""));
-	cantidadCorrectas = parseInt(prompt("Ingrese cantidad de preguntas correctas",""));
+	nombre = prompt("Ingrese su nombre:", "");
+	cantidadPreguntas = parseInt(prompt("Ingrese cantidad total de preguntas", ""));
+	cantidadCorrectas = parseInt(prompt("Ingrese cantidad de preguntas correctas", ""));
 
 	// Formula para el porcentaje => (cantidadX[n del total Y] / cantidadTotalY) * 100
 	porcentaje = (cantidadCorrectas / cantidadPreguntas) * 100;
@@ -201,7 +201,7 @@ function ResultadoTesting() {
 							<li>Sr. ${nombre.toUpperCase()} segun nuestros resultados, usted esta en un <mark><b>Fuera de Nivel</b></mark></li>
 						</ul>
 					`;
-					
+
 				} else {
 					document.getElementById("msgSeven").innerHTML = `!!Sr. ${nombre.toUpperCase()} DEBE REALIZAR EL TESTING NUEVAMENTE`;
 				}
@@ -222,8 +222,8 @@ function SumaMultiplicacion() {
 
 	if (a == b && b == c) {
 		// $("#msgOcho").html(`La suma es ${(parseInt(a) + parseInt(b))}`);
-		$("#msgOcho").html(`<ul><li>La suma es ${(a+b)}</li>
-			<li>El producto es ${((a+b)*c)}</li></ul>`
+		$("#msgOcho").html(`<ul><li>La suma es ${(a + b)}</li>
+			<li>El producto es ${((a + b) * c)}</li></ul>`
 		);
 	} else {
 		$("#msgOcho").html("!!Error, lo tres numeros no son iguales");
@@ -271,7 +271,7 @@ function SueldoTrabajador() {
 // 	let num1 = new Array(2);
 // 	let num2 = new Array(2);
 // 	let rsSuma = new Array(2);
-	
+
 // 	LlenarVectores(num1, num2);
 // 	Suma(num1, num2, rsSuma);
 // });
@@ -287,11 +287,11 @@ function SueldoTrabajador() {
  * @description Desactivar el evento "onmousedown" del raton (lado derecho)
  */
 function ControlRaton() {
- 	if (event.button == 2) {
- 		window.alert("Evento temporalmente desactivado.");
- 	}
+	if (event.button == 2) {
+		window.alert("Evento temporalmente desactivado.");
+	}
 }
-document.getElementById("disabledRigth").addEventListener('click', ()=> { 
+document.getElementById("disabledRigth").addEventListener('click', () => {
 	document.onmousedown = ControlRaton
 });
 /**
@@ -302,8 +302,8 @@ document.getElementById("disabledRigth").addEventListener('click', ()=> {
 
 
 // EJERCICIO N79823
-function quitarGuiones(inputNumber) { 
-	inputNumber.value = inputNumber.value.replace(',','.'); 
+function quitarGuiones(inputNumber) {
+	inputNumber.value = inputNumber.value.replace(',', '.');
 }
 
 function NotaMayorIgual() {
@@ -313,7 +313,7 @@ function NotaMayorIgual() {
 	let suma = 0, prom = 0;
 
 	suma = noteUno + noteDos + noteTres;
-	prom = (suma)/3;
+	prom = (suma) / 3;
 
 	// if (noteUno > notaDos && noteUno > noteTres) {
 	// 	$("#msgTrece").html(`La nota mayor es ${noteUno}`);
@@ -336,7 +336,7 @@ function NotaMayorIgual() {
 	} else {
 		$("#msgTrece").html("No has ingresado ningun valor");
 	}
-	
+
 }
 
 
@@ -344,9 +344,9 @@ function NotaMayorIgual() {
 
 // EJERCICIO N79824
 function PerimetroCuadrado() {
-	var ladoCuadrado = parseInt(prompt("Ingrese lado del cuadrado",""));
+	var ladoCuadrado = parseInt(prompt("Ingrese lado del cuadrado", ""));
 
-	$("#msgKatorce").html(`El perimetro del cuadrado es ${Math.pow(ladoCuadrado,4)}`);
+	$("#msgKatorce").html(`El perimetro del cuadrado es ${Math.pow(ladoCuadrado, 4)}`);
 }
 
 
@@ -354,13 +354,13 @@ function PerimetroCuadrado() {
 
 // EJERCICIO N79825
 function Suma_Producto() {
-	let a = parseInt(prompt("Ingrese primer valor: ",""));
-	let b = parseInt(prompt("Ingrese segundo valor: ",""));
-	let c = parseInt(prompt("Ingrese tercer valor: ",""));
-	let d = parseInt(prompt("Ingrese cuarto valor: ",""));
+	let a = parseInt(prompt("Ingrese primer valor: ", ""));
+	let b = parseInt(prompt("Ingrese segundo valor: ", ""));
+	let c = parseInt(prompt("Ingrese tercer valor: ", ""));
+	let d = parseInt(prompt("Ingrese cuarto valor: ", ""));
 
-	var suma = a+b+c+d;
-	var producto = a*b*c*d;
+	var suma = a + b + c + d;
+	var producto = a * b * c * d;
 	$("#msgQuince").html(`<ul>
 		<li>La suma de <b>${a}+${b}+${c}+${d}</b> es <b>${suma}</b></li>
 		<li>El producto de <b>${a} x ${b} x ${c} x ${d}</b> es <b>${producto}</b></li>
@@ -374,32 +374,32 @@ function Suma_Producto() {
 function ValorCompra() {
 	let opcion = parseInt(document.getElementById("inpOpcion").value.trim());
 	let cantidad, total;
-	
+
 	switch (opcion) {
 		case 1:
-			cantidad = parseInt(prompt("Cuantos desea llevar??",""));
+			cantidad = parseInt(prompt("Cuantos desea llevar??", ""));
 			total = 2390 * cantidad;
 			document.getElementById("msgDiezSeis").innerHTML = `Total de la compra $${(total)}`;
 			break;
 		case 2:
-			cantidad = parseInt(prompt("Cuantos desea llevar??",""));
+			cantidad = parseInt(prompt("Cuantos desea llevar??", ""));
 			total = 790 * cantidad;
 			document.getElementById("msgDiezSeis").innerHTML = `Total de la compra $${total}`;
 			break;
 		case 3:
-			cantidad = parseInt(prompt("Cuantos desea llevar??",""));
+			cantidad = parseInt(prompt("Cuantos desea llevar??", ""));
 			total = 1990 * cantidad;
 			document.getElementById("msgDiezSeis").innerHTML = `Total de la compra $${total}`;
 			break;
 		case 4:
-			cantidad = parseInt(prompt("Cuantos desea llevar??",""));
+			cantidad = parseInt(prompt("Cuantos desea llevar??", ""));
 			total = 3000 * cantidad;
 			document.getElementById("msgDiezSeis").innerHTML = `Total de la compra $${total}`;
 			break;
 		default:
 			document.getElementById("msgDiezSeis").innerHTML = "!!Debe seleccionar un articulo";
 	}
-	$("#inpOpcion").val("");	
+	$("#inpOpcion").val("");
 }
 
 
@@ -407,13 +407,13 @@ function ValorCompra() {
 
 // EJERCICIO N79827
 function validarEdades(edad) {
-	if (edad>=18 && edad<36) {
+	if (edad >= 18 && edad < 36) {
 		document.getElementById("msgDiezSeite").innerHTML = "Sos mayor de edad";
-	} else if (edad>=36 && edad<45) {
+	} else if (edad >= 36 && edad < 45) {
 		document.getElementById("msgDiezSeite").innerHTML = "Eres un adulto joven";
-	} else if (edad>=45 && edad<75) {
+	} else if (edad >= 45 && edad < 75) {
 		document.getElementById("msgDiezSeite").innerHTML = "!!Upa estas como el vino";
-	} else if (edad>=75) {
+	} else if (edad >= 75) {
 		document.getElementById("msgDiezSeite").innerHTML = "Estimado Sr/Sra es de la tercera edad";
 	}
 }
@@ -444,8 +444,8 @@ function Redondear(valor) {
 	El valor redondeado de <b>${valor}</b> is ${(Math.round(valor))}`;
 }
 
-btnExecute.addEventListener('click', function() {
-	let numero = parseFloat(prompt("Ingrese un valor entero o decimal",""));
+btnExecute.addEventListener('click', () => {
+	let numero = parseFloat(prompt("Ingrese un valor entero o decimal", ""));
 
 	if (isNaN(numero)) {
 		alert("Solo debe ingresar numeros");
@@ -462,16 +462,34 @@ btnExecute.addEventListener('click', function() {
 
 // EJERCICIO N79829
 function NumerosConsecutivos() {
-	let valorInicial = parseInt(prompt("Ingrese numero de inicio",""));
-	let valorFinal = parseInt(prompt("Ingrese numero final",""));
+	let valorInicial = parseInt(prompt("Ingrese numero de inicio", ""));
+	let valorFinal = parseInt(prompt("Ingrese numero final", ""));
 
-	for(var i=valorInicial; i<=valorFinal; i++) {
+	for (var i = valorInicial; i <= valorFinal; i++) {
 		// $("#msgDiezNueve").html(${i}+" ");
 		// document.write(i+" ");
 		// document.getElementById("msgDiezNueve").innerHTML = i+" ";
-		console.info(i+" ");
+		console.info(i + " ");
 	}
 }
+
+
+
+
+// EJERCICIO N79830
+function SumaOfValue(n1, n2) {
+	return n1 + n2;
+}
+
+let btnSumaValor = document.getElementById("sumaConRetorno");
+let retorno;
+btnSumaValor.addEventListener('click', () => {
+	let num1 = parseInt(prompt('Ingrese primer valor', ''));
+	let num2 = parseInt(prompt('Ingrese segundo valor', ''));
+
+	retorno = SumaOfValue(num1, num2);
+	document.getElementById("msgVeinte").innerHTML = `La suma de los valores ingresados es: ${retorno}`;
+});
 
 
 
