@@ -234,8 +234,17 @@ function SumaMultiplicacion() {
 
 
 // EJERCICIO N79819
+// PseudoCodigo Fuente: https://exprimicompu.blogspot.com/2019/08/calcular-sueldo.html?m=1
 function SueldoTrabajador() {
-	alert("!!Este ejercicio se encuentra pendiente");
+	let salary = parseInt(document.getElementById("inpSueldo").value.trim());
+	let years = parseInt(document.getElementById("inpAntiguedad").value.trim());
+
+	for (let i = 0; i < years; i++) {
+		salary = salary + (salary * 0.1);
+		console.info({ salary });
+	}
+
+	document.getElementById("msgNueve").innerHTML = `Su sueldo es: ${salary}`;
 }
 
 
@@ -244,37 +253,77 @@ function SueldoTrabajador() {
 /**
  * EJERCICIO N79820
  * @description Calculadora basica, que recibe dos numeros o mas guardandolos en un array
+ * @param {a, b}
  */
-// function LlenarVectores(a, b) {
-// 	for (var i=0; i<a.length; i++) {
-// 		let arr1 = parseInt(prompt("Ingrese primer y segundo valor para el primer arreglo",""));
-// 		a[i] = arr1;
-// 	}
-// 	for (var i=0; i<b.length; i++) {
-// 		let arr2 = parseInt(prompt("Ingrese tercer y cuarto valor para el segundo arreglo",""));
-// 		b[i] = arr2;
-// 	}
-// }
+function LlenarVectores(val1, val2) {
+	for (var i = 0; i < val1.length; i++) {
+		let arr1 = parseInt(prompt("Ingrese primer y segundo valor para el primer arreglo", ""));
+		val1[i] = arr1;
+	}
+	for (var i = 0; i < val2.length; i++) {
+		let arr2 = parseInt(prompt("Ingrese tercer y cuarto valor para el segundo arreglo", ""));
+		val2[i] = arr2;
+	}
+}
 
-// function Suma(n1, n2, rsSuma) {
-// 	for (var i=0; i<rsSuma.length; i++) {
-// 		$("#msgDiez").html(`<table>
-// 			<tr>
-// 				<td>${n1[i]} + ${n2[i]} = ${(n1[i]+n2[i])}</td>
-// 			</tr>
-// 			</table>`
-// 		);
-// 	}
-// }
+function Multiplicacion(n1, n2, result) {
+	for (var i = 0; i < result.length; i++) {
+		document.write(`<table>
+			<tr>
+				<td>${n1[i]} x ${n2[i]} = ${(n1[i] * n2[i])}</td>
+			</tr>
+			</table>`);
+	}
+}
 
-// document.getElementById("calcBasicArray").addEventListener('click', () => {
-// 	let num1 = new Array(2);
-// 	let num2 = new Array(2);
-// 	let rsSuma = new Array(2);
+function Division(n1, n2, result) {
+	for (var i = 0; i < result.length; i++) {
+		document.write(`<table>
+			<tr>
+				<td>${n1[i]} / ${n2[i]} = ${(n1[i] / n2[i])}</td>
+			</tr>
+			</table>`);
+	}
+}
 
-// 	LlenarVectores(num1, num2);
-// 	Suma(num1, num2, rsSuma);
-// });
+function Adicion(n1, n2, result) {
+	for (var i = 0; i < result.length; i++) {
+		document.write(`<table>
+			<tr>
+				<td>${n1[i]} + ${n2[i]} = ${(n1[i] + n2[i])}</td>
+			</tr>
+			</table>`);
+	}
+}
+
+function Sustraccion(n1, n2, result) {
+	for (var i = 0; i < result.length; i++) {
+		document.write(`<table>
+			<tr>
+				<td>${n1[i]} - ${n2[i]} = ${(n1[i] - n2[i])}</td>
+			</tr>
+			</table>`);
+	}
+}
+
+document.getElementById("calcBasicArray").addEventListener('click', () => {
+	let num1 = new Array(2);
+	let num2 = new Array(2);
+	let result = new Array(2);
+
+	LlenarVectores(num1, num2);
+	document.writeln("<b>Resultado de la multiplicacion:</b>")
+	Multiplicacion(num1, num2, result);
+	document.write("<br>");
+	document.writeln("<b>Resultado de la division:</b>")
+	Division(num1, num2, result);
+	document.write("<br>");
+	document.writeln("<b>Resultado de la suma:</b>")
+	Adicion(num1, num2, result);
+	document.write("<br>");
+	document.writeln("<b>Resultado de la resta:</b>")
+	Sustraccion(num1, num2, result);
+});
 /**
  * FIN EJERCICIO N79820
  */
@@ -302,7 +351,7 @@ document.getElementById("disabledRigth").addEventListener('click', () => {
 
 
 // EJERCICIO N79823
-function quitarGuiones(inputNumber) {
+function RemplazarComa(inputNumber) {
 	inputNumber.value = inputNumber.value.replace(',', '.');
 }
 
